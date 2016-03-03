@@ -4,14 +4,14 @@ This porject is authentication provider authkey development &amp; testing projec
 ##Installation guide
 For this project to your Repository and open it in Visual Studio 2015. 
 
-Change app.xaml.cs file code to your Authenticated Server
+Change *app.xaml.cs* file code to your Authenticated Server
 ```
 public static MobileServiceClient MobileService = new MobileServiceClient(
     "https://yourcloudbreadserver.azurewebsites.net/api/ping"
 );
 ```
 
-Change property of *MobileServiceAuthenticationProvider* to your authentication setting.
+Change *MainPage.xaml.cs* file property of *MobileServiceAuthenticationProvider* to your authentication setting.
 ```
 user = await App.MobileService
   .LoginAsync(MobileServiceAuthenticationProvider.Facebook);  // change here
@@ -23,4 +23,4 @@ Now you should copy *auth key* for deveopment purpose and paste the key at Postm
 For more information, follow up the official project wiki document 
 https://github.com/CloudBreadProject/CloudBread/wiki 
 
-###License : MIT
+License : MIT
