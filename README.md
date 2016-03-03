@@ -2,19 +2,19 @@
 This porject is authentication provider authkey development &amp; testing project for CloudBread game server engine 
 
 ##Installation guide
-Fork this project to your repository and open it in Visual Studio 2015. 
+Fork this project to your repository and open it in *Android Studio*. 
 
-Change *app.xaml.cs* file code to your Authenticated Server
+Change *MainActivity.java* file code to your Authenticated Server
 ```
-public static MobileServiceClient MobileService = new MobileServiceClient(
-    "https://yourcloudbreadserver.azurewebsites.net/api/ping"
+mClient = new MobileServiceClient(
+     "https://dw-cloudbread-ys.azurewebsites.net",
+    this
 );
 ```
 
-Change *MainPage.xaml.cs* file property of *MobileServiceAuthenticationProvider* to your authentication setting.
+Change *MainActivity.java* file property of *MobileServiceAuthenticationProvider* to your authentication setting.
 ```
-user = await App.MobileService
-  .LoginAsync(MobileServiceAuthenticationProvider.Facebook);  // change here
+ListenableFuture<MobileServiceUser> mLogin = mClient.login(MobileServiceAuthenticationProvider.Facebook);
 ```
 
 Build and execute app. Click Generate auth key and logon to authentication provider. 
