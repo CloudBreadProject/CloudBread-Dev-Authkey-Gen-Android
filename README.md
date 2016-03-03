@@ -7,7 +7,7 @@ Fork this project to your repository and open it in *Android Studio*.
 Change *MainActivity.java* file code to your Authenticated Server
 ```
 mClient = new MobileServiceClient(
-     "https://dw-cloudbread-ys.azurewebsites.net",
+     "https://yourservername.azurewebsites.net",
     this
 );
 ```
